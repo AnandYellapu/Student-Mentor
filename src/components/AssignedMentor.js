@@ -9,7 +9,7 @@ const AssignedMentor = ({ studentId }) => {
   useEffect(() => {
     const fetchAssignedMentor = async () => {
       try {
-        const response = await axios.get(`http://localhost:2000/api/students/${studentId}/mentor`);
+        const response = await axios.get(`https://stu-men-be.onrender.com/api/students/${studentId}/mentor`);
         setMentor(response.data);
       } catch (error) {
         console.error('Error fetching assigned mentor:', error);

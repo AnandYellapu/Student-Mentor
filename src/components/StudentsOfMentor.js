@@ -11,7 +11,7 @@ const StudentsOfMentor = () => {
   useEffect(() => {
     const fetchMentors = async () => {
       try {
-        const response = await axios.get('http://localhost:2000/api/mentors');
+        const response = await axios.get('https://stu-men-be.onrender.com/api/mentors');
         setMentors(response.data);
       } catch (error) {
         console.error('Error fetching mentors:', error.message);
@@ -25,7 +25,7 @@ const StudentsOfMentor = () => {
     const mentorId = e.target.value;
 
     try {
-      const response = await axios.get(`http://localhost:2000/api/mentors/${mentorId}/students-of-mentor`);
+      const response = await axios.get(`https://stu-men-be.onrender.com/api/mentors/${mentorId}/students-of-mentor`);
       setStudents(response.data);
       setSelectedMentor(mentorId);
     } catch (error) {

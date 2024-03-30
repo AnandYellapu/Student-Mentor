@@ -12,7 +12,7 @@ const AddStudentsToMentorForm = () => {
   useEffect(() => {
     const fetchMentors = async () => {
       try {
-        const response = await axios.get('http://localhost:2000/api/mentors');
+        const response = await axios.get('https://stu-men-be.onrender.com/api/mentors');
         setMentors(response.data);
       } catch (error) {
         console.error('Error fetching mentors:', error.message);
@@ -21,7 +21,7 @@ const AddStudentsToMentorForm = () => {
 
     const fetchStudents = async () => {
       try {
-        const response = await axios.get('http://localhost:2000/api/students');
+        const response = await axios.get('https://stu-men-be.onrender.com/api/students');
         setStudents(response.data);
       } catch (error) {
         console.error('Error fetching students:', error.message);
@@ -36,7 +36,7 @@ const AddStudentsToMentorForm = () => {
     e.preventDefault();
 
     try {
-      await axios.post(`http://localhost:2000/api/mentors/${selectedMentor}/add-students`, {
+      await axios.post(`https://stu-men-be.onrender.com/api/mentors/${selectedMentor}/add-students`, {
         studentIds: selectedStudents,
       });
 

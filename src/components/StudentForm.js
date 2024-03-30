@@ -10,7 +10,7 @@ const StudentForm = () => {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:2000/api/students/create', { name });
+      await axios.post('https://stu-men-be.onrender.com/api/students/create', { name });
       alert('Student created successfully!');
       setName('');
     } catch (error) {

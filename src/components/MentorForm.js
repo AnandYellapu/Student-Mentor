@@ -10,7 +10,7 @@ const MentorForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:2000/api/mentors/create-mentor', { name });
+      const response = await axios.post('https://stu-men-be.onrender.com/api/mentors/create-mentor', { name });
       alert('Mentor created successfully!');
       console.log(response.data);
       // Handle success, update state, or navigate to another page as needed
